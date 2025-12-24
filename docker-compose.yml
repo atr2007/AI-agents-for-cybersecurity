@@ -1,0 +1,12 @@
+services:
+  ai-agents-cyber:
+    build: .
+    container_name: ai-agents-cyber
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
